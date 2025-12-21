@@ -48,7 +48,7 @@ export function HeroSection() {
                 Harshitha Mathi
               </h1>
               <p className="text-lg text-gray-600">
-                A <span className="text-orange-500 font-medium">Web Developer & Content Writer</span> from India
+                A <span className="text-orange-500 font-medium">Web Developer</span> from India
               </p>
             </div>
             <p className="text-gray-500 max-w-md leading-relaxed">
