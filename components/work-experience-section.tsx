@@ -9,7 +9,7 @@ const experiences = [
     id: 1,
     title: "Web Developer and Content Writer",
     company: "HoliThemes",
-    location: "Remote",
+    location: "Vijayawada - India",
     period: "Nov 2024 - Present",
     type: "Full-time",
     description: "Owned complete development and maintenance of holithemes.com with responsive UI and motion driven layouts. Built and scaled Click to Chat product pages with conversion focused structure and feature clarity.",
@@ -19,7 +19,7 @@ const experiences = [
       "Delivered production ready code, animations and documentation aligned with business goals",
       "Contributed to WordPress plugin ecosystem with 700,000+ active installations"
     ],
-    technologies: ["React", "JavaScript", "WordPress", "PHP", "Tailwind CSS", "HTML", "CSS"]
+    technologies: [ "JavaScript", "WordPress", "PHP", "Tailwind CSS", "HTML", "CSS"]
   },
   {
     id: 2,
