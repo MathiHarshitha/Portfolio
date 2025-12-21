@@ -7,30 +7,30 @@ import { HandDrawnBook, HandDrawnStar, HandDrawnCircle } from "./doodles"
 const education = [
   {
     id: 1,
-    degree: "Master of Business Engineering",
-    institution: "Visvesvaraya Technological University",
-    location: "Karnataka, India",
-    period: "2019 - 2021",
-    grade: "First Class",
-    description: "Specialized in business engineering with focus on technology integration and process optimization."
+    degree: "BTech ECE",
+    institution: "St. Marys Womens Engineering College, Guntur",
+    location: "Guntur, India",
+    period: "2019 - 2023",
+    grade: "Engineering",
+    description: "Bachelor of Technology in Electronics and Communication Engineering with strong foundation in technical principles."
   },
   {
     id: 2,
-    degree: "Bachelor of Engineering",
-    institution: "Visvesvaraya Technological University", 
-    location: "Karnataka, India",
-    period: "2015 - 2019",
-    grade: "First Class",
-    description: "Comprehensive engineering education with strong foundation in technical principles and problem-solving."
+    degree: "Intermediate MPC",
+    institution: "Sri Chaitanya Girls Junior Kalasala, Vijayawada", 
+    location: "Vijayawada, India",
+    period: "2017 - 2019",
+    grade: "MPC Stream",
+    description: "Intermediate education in Mathematics, Physics, and Chemistry providing strong analytical foundation."
   },
   {
     id: 3,
-    degree: "Higher Secondary School",
-    institution: "Chinmaya Vidyalaya High School",
-    location: "Challakere",
+    degree: "SSC",
+    institution: "Vijayasri Sunflower High School, Challapalli",
+    location: "Challapalli, India",
     period: "2017",
-    grade: "Distinction",
-    description: "Completed higher secondary education with excellent academic performance."
+    grade: "Secondary Education",
+    description: "Completed secondary school education with excellent academic performance."
   }
 ]
 

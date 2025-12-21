@@ -8,25 +8,25 @@ const skillCategories = [
   {
     title: "Frontend",
     icon: Globe,
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"],
+    skills: ["React", "JavaScript", "HTML", "CSS", "Tailwind CSS"],
     color: "blue"
   },
   {
     title: "Backend",
     icon: Database,
-    skills: ["Node.js", "Python", "Java", "SQL", "MongoDB"],
+    skills: ["NodeJS", "Python", "SQL", "MongoDB"],
     color: "green"
   },
   {
-    title: "Tools & Design",
-    icon: Palette,
-    skills: ["Git", "Figma", "Adobe Creative Suite", "VS Code"],
+    title: "Tools & Deployment",
+    icon: Code,
+    skills: ["Git", "GitHub", "Vercel", "Netlify", "WordPress"],
     color: "purple"
   },
   {
-    title: "Soft Skills",
-    icon: Users,
-    skills: ["Leadership", "Communication", "Problem Solving", "Team Work"],
+    title: "AI & Emerging Tech",
+    icon: Brain,
+    skills: ["RAG", "Agentic AI", "AI Development"],
     color: "orange"
   }
 ]

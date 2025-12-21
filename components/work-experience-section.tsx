@@ -10,33 +10,31 @@ const experiences = [
     title: "Web Developer and Content Writer",
     company: "HoliThemes",
     location: "Remote",
-    period: "Nov 2023 - Present",
+    period: "Nov 2024 - Present",
     type: "Full-time",
-    description: "Results-driven Web Developer with ownership across design, development and production deployment. Strong execution focus across frontend, backend, payments and deployment workflows.",
+    description: "Owned complete development and maintenance of holithemes.com with responsive UI and motion driven layouts. Built and scaled Click to Chat product pages with conversion focused structure and feature clarity.",
     achievements: [
-      "Developed complete development and maintenance of responsive websites with motion-driven layouts",
-      "Built and scaled product pages with conversion-focused structure and feature clarity",
-      "Delivered production-ready code, animations, and documentation aligned with business goals",
-      "Built plugin platforms used by over 700,000 global users",
-      "Handled pricing architecture, payments, and checkout workflows"
+      "Owned complete development and maintenance of holithemes.com with responsive UI and motion driven layouts",
+      "Built and scaled Click to Chat product pages with conversion focused structure and feature clarity",
+      "Delivered production ready code, animations and documentation aligned with business goals",
+      "Contributed to WordPress plugin ecosystem with 700,000+ active installations"
     ],
-    technologies: ["React", "JavaScript", "WordPress", "PHP", "Tailwind CSS", "Node.js"]
+    technologies: ["React", "JavaScript", "WordPress", "PHP", "Tailwind CSS", "HTML", "CSS"]
   },
   {
     id: 2,
-    title: "Full Stack Developer",
-    company: "Freelance",
+    title: "Web Development Intern",
+    company: "Oasis Infobyte",
     location: "Remote",
-    period: "Jan 2023 - Oct 2023",
-    type: "Contract",
-    description: "Provided comprehensive web development services to various clients, focusing on modern web technologies and user experience.",
+    period: "May 2023 - Internship",
+    type: "Internship",
+    description: "Executed real world frontend and JavaScript projects in a structured development environment. Strengthened fundamentals across responsive layouts, DOM handling and best practices.",
     achievements: [
-      "Developed responsive web applications using React and Node.js",
-      "Implemented database solutions with SQL and MongoDB",
-      "Created custom WordPress themes and plugins",
-      "Delivered projects on time with high client satisfaction"
+      "Executed real world frontend and JavaScript projects in a structured development environment",
+      "Strengthened fundamentals across responsive layouts, DOM handling and best practices",
+      "Improved development workflow discipline through hands on delivery"
     ],
-    technologies: ["React", "Node.js", "MongoDB", "SQL", "WordPress", "JavaScript"]
+    technologies: ["JavaScript", "HTML", "CSS", "React", "Frontend Development"]
   }
 ]
 

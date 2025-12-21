@@ -7,31 +7,31 @@ import { Button } from "@/components/ui/button"
 const projects = [
   {
     id: 1,
-    title: "Click to Chat WhatsApp Plugin",
+    title: "Click to Chat WhatsApp Plugin Website",
     description:
-      "Complete product website for a WordPress plugin with 700,000+ active installations. Handled pricing architecture, plugin payments and checkout shop pages for monetization flow.",
-    image: "/whatsapp-chat-plugin-website-green-messaging-busin.jpg",
-    tags: ["WordPress", "JavaScript", "Payments"],
-    liveUrl: "https://developer.wordpress.org/plugins/click-to-chat/",
+      "Developed the complete product website for a WordPress plugin with 700,000 plus active installations. Handled pricing architecture, plugin payments and checkout shop pages for monetization flow.",
+    image: "/placeholder.svg",
+    tags: ["WordPress", "JavaScript", "Payments", "PHP"],
+    liveUrl: "https://holithemes.com/plugins/click-to-chat-for-whatsapp/",
     githubUrl: "#",
   },
   {
     id: 2,
     title: "HoliThemes Website",
     description:
-      "Full brand website with modern UI systems, animations and responsive layouts. Implemented consistent design language aligned with product-focused positioning.",
-    image: "/modern-theme-company-website-colorful-professional.jpg",
-    tags: ["React", "Tailwind CSS", "Animations"],
+      "Built the full brand website with modern UI systems, animations and responsive layouts. Implemented consistent design language aligned with product focused positioning.",
+    image: "/placeholder.svg",
+    tags: ["React", "Tailwind CSS", "Animations", "UI/UX"],
     liveUrl: "https://holithemes.com",
     githubUrl: "#",
   },
   {
     id: 3,
-    title: "Viswa Bharathi College of Law",
+    title: "Viswa Bharathi College of Law Website",
     description:
-      "Complete academic website using WordPress with custom PHP logic. Implemented admissions, programs and academic content with clear navigation flow.",
+      "Developed a complete academic website using WordPress with custom PHP logic. Implemented admissions, programs and academic content with clear navigation flow.",
     image: "/academic-law-college-institution-books-graduation-.jpg",
-    tags: ["WordPress", "PHP", "CMS"],
+    tags: ["WordPress", "PHP", "CMS", "Academic"],
     liveUrl: "https://viswabharathicollegeoflaw.com",
     githubUrl: "#",
   },
@@ -129,7 +129,7 @@ export function ProjectsSection() {
             variant="outline"
             className="rounded-full px-8 border-orange-200 text-orange-600 hover:bg-orange-50 bg-transparent"
           >
-            <a href="https://github.com/harshithamathi" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/mathiharshitha" target="_blank" rel="noopener noreferrer">
               View All Projects
             </a>
           </Button>

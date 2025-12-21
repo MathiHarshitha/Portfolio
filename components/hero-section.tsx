@@ -68,7 +68,7 @@ export function HeroSection() {
             {/* Social Icons */}
             <div className="flex items-center gap-4 pt-4">
               <a
-                href="https://github.com/harshithamathi"
+                href="https://github.com/mathiharshitha"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-100 hover:bg-orange-100 flex items-center justify-center text-gray-600 hover:text-orange-500 transition-colors"

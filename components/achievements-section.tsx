@@ -7,37 +7,37 @@ import { HandDrawnStar, HandDrawnCircle } from "./doodles"
 const achievements = [
   {
     id: 1,
-    title: "Best Innovation Award",
-    organization: "Tech Excellence Awards 2023",
-    year: "2023",
-    description: "Recognized for developing an innovative solution that improved user engagement by 40%",
+    title: "Production Grade Websites",
+    organization: "Professional Achievement",
+    year: "2024",
+    description: "Delivered multiple production grade websites and plugin platforms with clean, maintainable code",
     icon: Trophy,
     color: "gold"
   },
   {
     id: 2,
-    title: "AWS Certified Solutions Architect",
-    organization: "Amazon Web Services",
-    year: "2023",
-    description: "Professional certification demonstrating expertise in designing distributed systems on AWS",
+    title: "Revenue Impact Components",
+    organization: "HoliThemes",
+    year: "2024",
+    description: "Owned revenue impacting components including pricing configuration and checkout workflows",
     icon: Award,
     color: "blue"
   },
   {
     id: 3,
-    title: "Outstanding Academic Performance",
-    organization: "Visvesvaraya Technological University",
-    year: "2021",
-    description: "Graduated with First Class honors in Master of Business Engineering",
+    title: "WordPress Plugin Ecosystem",
+    organization: "Global Impact",
+    year: "2024",
+    description: "Contributed to a WordPress plugin ecosystem actively used by over 700,000 global users",
     icon: Medal,
     color: "green"
   },
   {
     id: 4,
-    title: "Top Performer",
-    organization: "Annual Performance Review",
-    year: "2022",
-    description: "Recognized as top performer for exceptional project delivery and team collaboration",
+    title: "Code Quality Recognition",
+    organization: "Professional Excellence",
+    year: "2024",
+    description: "Recognized for execution consistency, code quality and documentation clarity",
     icon: Star,
     color: "purple"
   }
