@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Code2, Zap, Users, Trophy } from "lucide-react"
+import { CodeSnippet } from "./code-snippet"
 
 const stats = [
   { icon: Code2, value: "1+", label: "Years Experience", color: "from-blue-500 to-cyan-500" },
@@ -89,44 +90,101 @@ export function AboutSection() {
               />
             </div>
 
-            {/* Floating stats cards */}
-            {stats.map((stat, index) => {
-              const Icon = stat.icon
-              return (
-                <div
-                  key={stat.label}
-                  className={`absolute bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-4 z-10 animate-float group hover:scale-110 transition-transform duration-300`}
-                  style={{
-                    animationDelay: `${index * 0.5}s`,
-                    ...(index === 0 && { top: '10%', left: '-8%' }),
-                    ...(index === 1 && { top: '25%', right: '-8%' }),
-                    ...(index === 2 && { bottom: '25%', left: '-6%' }),
-                    ...(index === 3 && { bottom: '10%', right: '-6%' })
-                  }}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${stat.color} flex items-center justify-center group-hover:rotate-12 transition-transform duration-300`}>
-                      <Icon size={20} className="text-white" />
+            {/* Main coding dashboard with glassmorphism effect */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl group bg-white/10 backdrop-blur-md border border-white/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent z-10" />
+              
+              {/* Dashboard Content */}
+              <div className="p-8 relative z-20">
+                {/* Core Technologies Header */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">Core Technologies</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="flex items-center gap-2 p-3 bg-blue-100 rounded-lg">
+                      <div className="w-4 h-4 bg-blue-500 rounded"></div>
+                      <span className="text-sm font-medium text-gray-700">React & Next.js</span>
                     </div>
-                    <div>
-                      <p className="text-lg font-bold text-gray-800">{stat.value}</p>
-                      <p className="text-xs text-gray-600">{stat.label}</p>
+                    <div className="flex items-center gap-2 p-3 bg-yellow-100 rounded-lg">
+                      <div className="w-4 h-4 bg-yellow-500 rounded"></div>
+                      <span className="text-sm font-medium text-gray-700">JavaScript & TypeScript</span>
+                    </div>
+                    <div className="flex items-center gap-2 p-3 bg-green-100 rounded-lg">
+                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                      <span className="text-sm font-medium text-gray-700">Node.js & Python</span>
+                    </div>
+                    <div className="flex items-center gap-2 p-3 bg-purple-100 rounded-lg">
+                      <div className="w-4 h-4 bg-purple-500 rounded"></div>
+                      <span className="text-sm font-medium text-gray-700">Tailwind & CSS</span>
                     </div>
                   </div>
                 </div>
-              )
-            })}
 
-            {/* Main image with glassmorphism effect */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent z-10" />
-              <img
-                src="/professional-developer-working-casual-plaid-shirt-.jpg"
-                alt="Harshitha working"
-                className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
-              />
+                {/* Current Status Dashboard */}
+                <div className="bg-gray-900 rounded-2xl p-6 shadow-inner">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <div className="flex gap-1">
+                        <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      </div>
+                      <span className="text-gray-300 text-sm font-mono">developerLocation.js</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                      <span className="text-xs text-gray-400">LIVE</span>
+                    </div>
+                  </div>
+                  
+                  <div className="font-mono text-sm">
+                    <div className="text-gray-300">
+                      <span className="text-purple-400">function</span>{" "}
+                      <span className="text-blue-400">Location</span>
+                      <span className="text-gray-300">{"({ developer }) {"}</span>
+                    </div>
+                    <div className="text-gray-300 ml-4 mt-1">
+                      <span className="text-purple-400">return</span>{" "}
+                      <span className="text-gray-300">{"("}</span>
+                    </div>
+                    <div className="text-gray-300 ml-8 mt-1">
+                      <span className="text-red-400">{"<p>"}</span>
+                    </div>
+                    <div className="text-gray-300 ml-12 mt-1">
+                      <span className="text-cyan-400">Harshitha</span>
+                      <span className="text-gray-300">.isAlive && isWorkingHours</span>
+                    </div>
+                    <div className="text-gray-300 ml-16 mt-1">
+                      <span className="text-gray-300">? </span>
+                      <span className="text-green-400">'💻 Coding at desk'</span>
+                    </div>
+                    <div className="text-gray-300 ml-16 mt-1">
+                      <span className="text-gray-300">: </span>
+                      <span className="text-blue-400">'😴 Sleeping mode'</span>
+                    </div>
+                    <div className="text-gray-300 ml-8 mt-1">
+                      <span className="text-red-400">{"</p>"}</span>
+                    </div>
+                    <div className="text-gray-300 ml-4 mt-1">
+                      <span className="text-gray-300">{");"}</span>
+                    </div>
+                    <div className="text-gray-300 mt-1">
+                      <span className="text-gray-300">{"}"}</span>
+                    </div>
+                    
+                    <div className="mt-4 pt-4 border-t border-gray-700">
+                      <div className="text-gray-500 text-xs">
+                        // Current location: <span className="text-green-400">💻 Coding at desk</span>
+                      </div>
+                      {/* <div className="text-gray-500 text-xs">
+                        // Working hours: 9:00 AM - 9:00 PM
+                      </div> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" />
             </div>
           </div>
 
@@ -183,25 +241,36 @@ export function AboutSection() {
               </div>
             </div>
 
-            {/* Enhanced tech stack */}
+            {/* Stats Grid */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900">Core Technologies</h3>
+              <h3 className="text-lg font-semibold text-gray-900">Key Metrics</h3>
               <div className="grid grid-cols-2 gap-4">
-                {[
-                  { tech: "React & Next.js", icon: "⚛️" },
-                  { tech: "JavaScript & TypeScript", icon: "🟨" },
-                  { tech: "Node.js & Python", icon: "🟢" },
-                  { tech: "Tailwind & CSS", icon: "🎨" }
-                ].map((item, index) => (
-                  <div
-                    key={item.tech}
-                    className="flex items-center gap-3 p-3 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100 hover:shadow-md transition-all duration-300 group"
-                  >
-                    <span className="text-xl group-hover:scale-110 transition-transform duration-300">{item.icon}</span>
-                    <span className="text-gray-700 font-medium text-sm">{item.tech}</span>
-                  </div>
-                ))}
+                {stats.map((stat, index) => {
+                  const Icon = stat.icon
+                  return (
+                    <div
+                      key={stat.label}
+                      className="bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100 p-4 hover:shadow-md transition-all duration-300 group"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${stat.color} flex items-center justify-center group-hover:rotate-12 transition-transform duration-300`}>
+                          <Icon size={16} className="text-white" />
+                        </div>
+                        <div>
+                          <p className="text-lg font-bold text-gray-800">{stat.value}</p>
+                          <p className="text-xs text-gray-600">{stat.label}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
               </div>
+            </div>
+
+            {/* Fun Code Snippet */}
+            <div className="space-y-4">
+              {/* <h3 className="text-lg font-semibold text-gray-900">Current Status</h3> */}
+              {/* <CodeSnippet /> */}
             </div>
 
             {/* CTA Button */}

@@ -18,4 +18,6 @@ export { Footer } from './footer'
 
 // Utility components
 export { ThemeProvider } from './theme-provider'
+export { DeveloperStatus } from './developer-status'
+export { CodeSnippet } from './code-snippet'
 export * from './doodles'

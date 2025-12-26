@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react"
+import { DeveloperStatus } from "./developer-status"
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -55,6 +56,11 @@ export function HeroSection() {
               Results driven Web Developer with ownership across design, development and production deployment. Strong
               execution focus across frontend, backend, payments and deployment workflows.
             </p>
+
+            {/* Developer Status */}
+            <div className="flex justify-start">
+              <DeveloperStatus theme="light" />
+            </div>
 
             {/* CTA Button */}
             <Button
