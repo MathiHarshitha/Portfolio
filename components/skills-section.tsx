@@ -10,42 +10,42 @@ const skillCategories = [
     id: "all",
     title: "All Skills",
     icon: Sparkles,
-    skills: ["React", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS", "Node.js", "Python", "PHP", "API Design", "MongoDB", "SQL", "Firebase", "Redis", "Git", "WordPress", "Docker", "Vercel", "AI/RAG", "UI/UX", "Animations"],
+    skills: ["React", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS", "Node.js", "Python", "PHP", "SQL", "Git", "WordPress", "Vercel", "AI/RAG", "Animations"],
     color: "from-cyan-400 to-purple-400"
   },
   {
     id: "frontend",
     title: "Frontend",
     icon: Monitor,
-    skills: ["React", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS", "Next.js", "Vue.js", "Angular"],
+    skills: ["React", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS"],
     color: "from-blue-400 to-cyan-400"
   },
   {
     id: "backend", 
     title: "Backend",
     icon: Server,
-    skills: ["Node.js", "Python", "PHP", "API Design", "Express.js", "FastAPI", "GraphQL"],
+    skills: ["Node.js", "Python", "PHP", ],
     color: "from-green-400 to-emerald-400"
   },
   {
     id: "database",
     title: "Database",
     icon: Database,
-    skills: ["MongoDB", "SQL", "Firebase", "Redis", "PostgreSQL", "MySQL"],
+    skills: ["MongoDB", "MySQL", ],
     color: "from-purple-400 to-violet-400"
   },
   {
     id: "tools",
     title: "Tools",
     icon: Wrench,
-    skills: ["Git", "WordPress", "Docker", "Vercel", "AWS", "Linux"],
+    skills: ["Git", "WordPress", "Vercel", ],
     color: "from-orange-400 to-red-400"
   },
   {
     id: "design",
     title: "AI & Design",
     icon: Palette,
-    skills: ["AI/RAG", "UI/UX", "Animations", "Figma", "Adobe Creative Suite"],
+    skills: ["AI/RAG", "Animations"],
     color: "from-pink-400 to-rose-400"
   }
 ]
