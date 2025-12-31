@@ -86,12 +86,12 @@ export function ContactSection() {
                   <p className="text-gray-800 font-medium">mathiharshitha@gmail.com</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
+              {/* <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-500">
                   <Phone size={20} />
                 </div>
 
-              </div>
+              </div> */}
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-500">
                   <MapPin size={20} />
