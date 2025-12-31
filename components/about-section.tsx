@@ -62,12 +62,12 @@ export function AboutSection() {
       className="py-24 bg-gradient-to-br from-orange-50/50 via-white to-pink-50/30 overflow-hidden relative"
     >
       {/* Floating geometric shapes */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-orange-200 to-pink-200 rounded-full opacity-20 animate-float" />
-      <div className="absolute top-40 right-16 w-16 h-16 bg-gradient-to-br from-purple-200 to-blue-200 rotate-45 opacity-20 animate-float" style={{ animationDelay: "2s" }} />
-      <div className="absolute bottom-32 left-1/4 w-12 h-12 bg-gradient-to-br from-green-200 to-cyan-200 rounded-full opacity-20 animate-pulse" />
+      <div className="absolute top-20 left-4 sm:left-10 w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-br from-orange-200 to-pink-200 rounded-full opacity-20 animate-float" />
+      <div className="absolute top-40 right-8 sm:right-16 w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-br from-purple-200 to-blue-200 rotate-45 opacity-20 animate-float" style={{ animationDelay: "2s" }} />
+      <div className="absolute bottom-32 left-1/4 w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-green-200 to-cyan-200 rounded-full opacity-20 animate-pulse" />
 
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Enhanced Image Section */}
           <div
             className={`relative transition-all duration-700 ${
@@ -99,30 +99,30 @@ export function AboutSection() {
                 {/* Core Technologies Header */}
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Core Technologies</h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="flex items-center gap-2 p-3 bg-blue-100 rounded-lg">
-                      <div className="w-4 h-4 bg-blue-500 rounded"></div>
-                      <span className="text-sm font-medium text-gray-700">React.js</span>
+                  <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                    <div className="flex items-center gap-2 p-2 sm:p-3 bg-blue-100 rounded-lg">
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded"></div>
+                      <span className="text-xs sm:text-sm font-medium text-gray-700">React.js</span>
                     </div>
-                    <div className="flex items-center gap-2 p-3 bg-green-100 rounded-lg">
-                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                      <span className="text-sm font-medium text-gray-700">Node.js</span>
+                    <div className="flex items-center gap-2 p-2 sm:p-3 bg-green-100 rounded-lg">
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded-full"></div>
+                      <span className="text-xs sm:text-sm font-medium text-gray-700">Node.js</span>
                     </div>
-                    <div className="flex items-center gap-2 p-3 bg-pink-100 rounded-lg">
-                      <div className="w-4 h-4 bg-yellow-500 rounded"></div>
-                      <span className="text-sm font-medium text-gray-700">Tailwind CSS</span>
+                    <div className="flex items-center gap-2 p-2 sm:p-3 bg-pink-100 rounded-lg">
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-yellow-500 rounded"></div>
+                      <span className="text-xs sm:text-sm font-medium text-gray-700">Tailwind CSS</span>
                     </div>
-                    <div className="flex items-center gap-2 p-3 bg-blue-100 rounded-lg">
-                      <div className="w-4 h-4 bg-purple-500 rounded"></div>
-                      <span className="text-sm font-medium text-gray-700">HTML,CSS & JS</span>
+                    <div className="flex items-center gap-2 p-2 sm:p-3 bg-blue-100 rounded-lg">
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-purple-500 rounded"></div>
+                      <span className="text-xs sm:text-sm font-medium text-gray-700">HTML,CSS & JS</span>
                     </div>
-                    <div className="flex items-center gap-2 p-3 bg-yellow-100 rounded-lg">
-                      <div className="w-4 h-4 bg-pink-500 rounded"></div>
-                      <span className="text-sm font-medium text-gray-700">WordPress</span>
+                    <div className="flex items-center gap-2 p-2 sm:p-3 bg-yellow-100 rounded-lg">
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-pink-500 rounded"></div>
+                      <span className="text-xs sm:text-sm font-medium text-gray-700">WordPress</span>
                     </div>
-                    <div className="flex items-center gap-2 p-3 bg-orange-100 rounded-lg">
-                      <div className="w-4 h-4 bg-orange-500 rounded"></div>
-                      <span className="text-sm font-medium text-gray-700">Python & SQL</span>
+                    <div className="flex items-center gap-2 p-2 sm:p-3 bg-orange-100 rounded-lg">
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-orange-500 rounded"></div>
+                      <span className="text-xs sm:text-sm font-medium text-gray-700">Python & SQL</span>
                     </div>
                   </div>
                 </div>
@@ -252,7 +252,7 @@ export function AboutSection() {
             {/* Stats Grid */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900">Key Metrics</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {stats.map((stat, index) => {
                   const Icon = stat.icon
                   return (

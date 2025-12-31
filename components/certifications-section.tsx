@@ -107,7 +107,7 @@ export function CertificationsSection() {
         <HandDrawnCircle className="w-20 h-20 text-purple-300 animate-blob" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <p className="text-indigo-600 font-medium mb-2">Professional Growth</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Certifications</h2>

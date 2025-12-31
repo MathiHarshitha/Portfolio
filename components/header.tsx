@@ -32,7 +32,7 @@ export function Header() {
         isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent",
       )}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
         <nav className="flex items-center justify-between">
           <a href="#home" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-400 to-orange-500 flex items-center justify-center">

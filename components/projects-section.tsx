@@ -60,7 +60,7 @@ export function ProjectsSection() {
 
   return (
     <section id="projects" ref={sectionRef} className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-4">
             <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
@@ -73,7 +73,7 @@ export function ProjectsSection() {
         </div>
 
         <div
-          className={`grid md:grid-cols-3 gap-8 transition-all duration-500 ${
+          className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 transition-all duration-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >

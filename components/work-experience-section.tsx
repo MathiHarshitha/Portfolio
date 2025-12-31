@@ -76,7 +76,7 @@ export function WorkExperienceSection() {
         <HandDrawnArrow className="w-20 h-10 text-pink-400 animate-pulse-soft" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <p className="text-orange-500 font-medium mb-2">Career Journey</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Work Experience</h2>

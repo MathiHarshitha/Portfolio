@@ -106,14 +106,14 @@ export function SkillsSection() {
       />
       
       {/* Floating elements */}
-      <div className="absolute top-20 left-16 opacity-30">
-        <HandDrawnStar className="w-12 h-12 text-purple-400 animate-pulse-soft" />
+      <div className="absolute top-20 left-8 sm:left-16 opacity-30">
+        <HandDrawnStar className="w-10 sm:w-12 h-10 sm:h-12 text-purple-400 animate-pulse-soft" />
       </div>
-      <div className="absolute bottom-16 right-20 opacity-20">
-        <HandDrawnArrow className="w-16 h-16 text-pink-300 animate-float" />
+      <div className="absolute bottom-16 right-10 sm:right-20 opacity-20">
+        <HandDrawnArrow className="w-12 sm:w-16 h-12 sm:h-16 text-pink-300 animate-float" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6">
@@ -130,9 +130,9 @@ export function SkillsSection() {
         </div>
 
         {/* Main Content Container */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Tabs and Skills */}
-          <div className="relative order-1">
+          <div className="relative order-2 lg:order-1">
             {/* Tabs */}
             <div className={`mb-8 transition-all duration-1000 ${
               showTabs ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
@@ -144,7 +144,7 @@ export function SkillsSection() {
                     <button
                       key={category.id}
                       onClick={() => setActiveTab(category.id)}
-                      className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 tab-hover ${
+                      className={`flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 rounded-full transition-all duration-300 tab-hover text-xs sm:text-sm ${
                         activeTab === category.id
                           ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
                           : 'bg-white/10 backdrop-blur-sm text-white/70 hover:bg-white/20 hover:text-white'
@@ -153,8 +153,8 @@ export function SkillsSection() {
                         animationDelay: `${skillCategories.indexOf(category) * 100}ms`
                       }}
                     >
-                      <IconComponent size={16} />
-                      <span className="text-sm font-medium">{category.title}</span>
+                      <IconComponent size={14} className="sm:w-4 sm:h-4" />
+                      <span className="font-medium">{category.title}</span>
                     </button>
                   )
                 })}
@@ -164,16 +164,19 @@ export function SkillsSection() {
             {/* Skills Display */}
             <div 
               ref={skillsRef}
-              className={`relative h-96 transition-all duration-1000 ${
+              className={`relative h-80 sm:h-96 transition-all duration-1000 ${
                 showTabs ? 'mt-8' : 'mt-0'
               }`}
             >
-              {/* Skills Animation Container */}
-              <div className="relative w-full h-full">
+              {/* Skills Animation Container - Use CSS for responsive radius */}
+              <div className="relative w-full h-full skills-container">
                 {activeCategory.skills.map((skill, index) => {
-                  // Create circular arrangement
+                  // Create circular arrangement with mobile-friendly radius
                   const angle = (index / activeCategory.skills.length) * 2 * Math.PI
-                  const radius = showTabs ? 120 : 80 + (index % 3) * 40
+                  const baseRadius = showTabs ? 100 : 60
+                  const mobileRadius = showTabs ? 80 : 50
+                  // Use a responsive approach without window object
+                  const radius = baseRadius + (index % 3) * 30
                   const x = Math.cos(angle) * radius
                   const y = Math.sin(angle) * radius
                   
@@ -197,8 +200,8 @@ export function SkillsSection() {
                         <div className={`absolute inset-0 bg-gradient-to-r ${activeCategory.color} rounded-2xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300`} />
                         
                         {/* Skill badge */}
-                        <div className="relative px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white font-medium hover:bg-white/20 transition-all duration-300 cursor-default group-hover:scale-110 group-hover:rotate-1">
-                          <span className="relative z-10 text-sm">{skill}</span>
+                        <div className="relative px-2 py-1 sm:px-4 sm:py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white font-medium hover:bg-white/20 transition-all duration-300 cursor-default group-hover:scale-110 group-hover:rotate-1">
+                          <span className="relative z-10 text-xs sm:text-sm">{skill}</span>
                           
                           {/* Animated border */}
                           <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${activeCategory.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
@@ -210,10 +213,10 @@ export function SkillsSection() {
                 
                 {/* Center element */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${activeCategory.color} rounded-full flex items-center justify-center shadow-2xl transition-all duration-500 animate-brain-glow ${
+                  <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${activeCategory.color} rounded-full flex items-center justify-center shadow-2xl transition-all duration-500 animate-brain-glow ${
                     showTabs ? 'scale-110' : 'scale-100'
                   }`}>
-                    <activeCategory.icon size={20} className="text-white" />
+                    <activeCategory.icon size={16} className="text-white sm:w-5 sm:h-5" />
                   </div>
                 </div>
               </div>
@@ -221,7 +224,7 @@ export function SkillsSection() {
           </div>
 
           {/* Right Side - Skills Image */}
-          <div className={`relative transition-all duration-1000 order-2 ${
+          <div className={`relative transition-all duration-1000 order-1 lg:order-2 ${
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
           }`}>
             <div className="relative">
@@ -229,10 +232,10 @@ export function SkillsSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/30 to-purple-400/30 rounded-3xl blur-2xl scale-110" />
               
               {/* Skills image container */}
-              <div className="relative bg-black/20 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-                <div className="relative w-full aspect-square max-w-md mx-auto">
+              <div className="relative bg-black/20 backdrop-blur-sm rounded-3xl p-4 sm:p-8 border border-white/10">
+                <div className="relative w-full aspect-square max-w-sm sm:max-w-md mx-auto">
                   <Image
-                    src="/skills image.png"
+                    src="/Skills image.png"
                     alt="Skills and Technologies"
                     fill
                     className="object-contain rounded-2xl"
@@ -241,10 +244,10 @@ export function SkillsSection() {
                   
                   {/* Floating particles overlay */}
                   <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute top-4 right-4 w-4 h-4 bg-cyan-500/40 rounded-full animate-pulse" />
-                    <div className="absolute bottom-8 left-6 w-3 h-3 bg-blue-500/40 rounded-full animate-pulse delay-300" />
+                    <div className="absolute top-4 right-4 w-3 h-3 sm:w-4 sm:h-4 bg-cyan-500/40 rounded-full animate-pulse" />
+                    <div className="absolute bottom-8 left-6 w-2 h-2 sm:w-3 sm:h-3 bg-blue-500/40 rounded-full animate-pulse delay-300" />
                     <div className="absolute top-1/3 left-4 w-2 h-2 bg-purple-500/40 rounded-full animate-pulse delay-700" />
-                    <div className="absolute bottom-1/3 right-6 w-3 h-3 bg-green-500/40 rounded-full animate-pulse delay-1000" />
+                    <div className="absolute bottom-1/3 right-6 w-2 h-2 sm:w-3 sm:h-3 bg-green-500/40 rounded-full animate-pulse delay-1000" />
                     <div className="absolute top-2/3 right-8 w-2 h-2 bg-pink-500/40 rounded-full animate-pulse delay-1300" />
                   </div>
                 </div>
@@ -255,11 +258,11 @@ export function SkillsSection() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl">
-            <Zap className="text-yellow-400" size={24} />
+          <div className="inline-flex items-center gap-4 px-6 sm:px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl max-w-full">
+            <Zap className="text-yellow-400 flex-shrink-0" size={24} />
             <div className="text-left">
-              <div className="text-white font-bold text-lg">Ready to Build Something Amazing?</div>
-              <div className="text-white/70 text-sm">Let's turn your ideas into reality</div>
+              <div className="text-white font-bold text-base sm:text-lg">Ready to Build Something Amazing?</div>
+              <div className="text-white/70 text-xs sm:text-sm">Let's turn your ideas into reality</div>
             </div>
           </div>
         </div>

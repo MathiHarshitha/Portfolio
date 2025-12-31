@@ -15,26 +15,26 @@ export function HeroSection() {
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Main gradient wash */}
-        <div className="absolute top-0 right-0 w-[70%] h-[80%] bg-gradient-to-bl from-orange-200/60 via-pink-100/40 to-transparent rounded-bl-[100%]" />
-        <div className="absolute top-20 right-20 w-[50%] h-[60%] bg-gradient-to-bl from-purple-200/30 via-pink-100/20 to-transparent rounded-bl-[100%]" />
+        <div className="absolute top-0 right-0 w-[60%] sm:w-[70%] h-[80%] bg-gradient-to-bl from-orange-200/60 via-pink-100/40 to-transparent rounded-bl-[100%]" />
+        <div className="absolute top-20 right-10 sm:right-20 w-[40%] sm:w-[50%] h-[60%] bg-gradient-to-bl from-purple-200/30 via-pink-100/20 to-transparent rounded-bl-[100%]" />
 
         {/* Decorative blobs */}
         <div
-          className="absolute top-32 left-10 w-24 h-24 bg-yellow-200/50 animate-blob animate-pulse-soft"
+          className="absolute top-32 left-4 sm:left-10 w-20 sm:w-24 h-20 sm:h-24 bg-yellow-200/50 animate-blob animate-pulse-soft"
           style={{ borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" }}
         />
         <div
-          className="absolute bottom-40 left-20 w-16 h-16 bg-pink-200/50 animate-blob animate-pulse-soft"
+          className="absolute bottom-40 left-10 sm:left-20 w-12 sm:w-16 h-12 sm:h-16 bg-pink-200/50 animate-blob animate-pulse-soft"
           style={{ animationDelay: "2s", borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%" }}
         />
-        <div className="absolute top-1/3 right-[15%] w-8 h-8 bg-purple-300/40 rounded-full animate-float" />
+        <div className="absolute top-1/3 right-[10%] sm:right-[15%] w-6 sm:w-8 h-6 sm:h-8 bg-purple-300/40 rounded-full animate-float" />
         <div
-          className="absolute bottom-1/3 right-10 w-12 h-12 bg-orange-200/50 animate-blob"
+          className="absolute bottom-1/3 right-4 sm:right-10 w-10 sm:w-12 h-10 sm:h-12 bg-orange-200/50 animate-blob"
           style={{ animationDelay: "4s" }}
         />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 w-full">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div
@@ -113,8 +113,8 @@ export function HeroSection() {
             <div className="relative">
               {/* Main image container */}
               <div className="relative">
-                {/* Image container with defined dimensions */}
-                <div className="w-80 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] relative">
+                {/* Image container with defined dimensions - Better mobile sizing */}
+                <div className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] relative">
                   {/* Background glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-pink-400/20 rounded-3xl blur-2xl scale-110" />
                   
@@ -123,18 +123,12 @@ export function HeroSection() {
                     <img
                       src="https://res.cloudinary.com/dv5lcy4na/image/upload/v1767158016/Harshitha_Mathi_portfolio_image_akerxa.webp"
                       alt="Harshitha Mathi - Web Developer"
-                      className="w-full h-full object-contain p-4"
+                      className="w-full h-full object-contain p-2 sm:p-4"
                     />
                     
                     {/* Subtle overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-transparent to-white/5 pointer-events-none" />
                   </div>
-                  
-                  
-                  
-                  
-                  
-                  
                 </div>
               </div>
             </div>
