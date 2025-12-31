@@ -3,19 +3,19 @@
 import { useEffect, useRef, useState } from "react"
 import { Calendar, MapPin, ExternalLink } from "lucide-react"
 import { HandDrawnArrow, HandDrawnCode, HandDrawnLightbulb } from "./doodles"
+import Image from "next/image"
 
 const experiences = [
   {
     id: 1,
     title: "Web Developer and Content Writer",
     company: "HoliThemes",
+    logo: "https://res.cloudinary.com/dv5lcy4na/image/upload/v1767162143/holithemes_logo.png",
     location: "Vijayawada - India",
     period: "Nov 2024 - Present",
     type: "Full-time",
     description: "Owned complete development and maintenance of holithemes.com with responsive UI and motion driven layouts. Built and scaled Click to Chat product pages with conversion focused structure and feature clarity.",
     achievements: [
-      "Owned complete development and maintenance of holithemes.com with responsive UI and motion driven layouts",
-      "Built and scaled Click to Chat product pages with conversion focused structure and feature clarity",
       "Delivered production ready code, animations and documentation aligned with business goals",
       "Contributed to WordPress plugin ecosystem with 700,000+ active installations"
     ],
@@ -25,12 +25,12 @@ const experiences = [
     id: 2,
     title: "Web Development Intern",
     company: "Oasis Infobyte",
+    logo: "https://res.cloudinary.com/dv5lcy4na/image/upload/v1767161880/oasis_infobyte_logo_dixey0.jpg",
     location: "Remote",
     period: "May 2023 - Internship",
     type: "Internship",
-    description: "Executed real world frontend and JavaScript projects in a structured development environment. Strengthened fundamentals across responsive layouts, DOM handling and best practices.",
+    description: "Executed real world frontend and JavaScript projects in a structured development environment. ",
     achievements: [
-      "Executed real world frontend and JavaScript projects in a structured development environment",
       "Strengthened fundamentals across responsive layouts, DOM handling and best practices",
       "Improved development workflow discipline through hands on delivery"
     ],
@@ -108,7 +108,31 @@ export function WorkExperienceSection() {
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="md:col-span-2">
                     <div className="flex flex-wrap items-start gap-4 mb-4">
-                      <div>
+                      {/* Company Logo */}
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 rounded-2xl bg-white border border-gray-200 flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300 group">
+                          <div className="relative w-full h-full rounded-xl overflow-hidden">
+                            <Image
+                              src={exp.logo}
+                              alt={`${exp.company} logo`}
+                              width={64}
+                              height={64}
+                              className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
+                              onError={(e) => {
+                                // Fallback to company initial if image fails to load
+                                const target = e.target as HTMLImageElement;
+                                target.style.display = 'none';
+                                const parent = target.parentElement;
+                                if (parent) {
+                                  parent.innerHTML = `<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-orange-400 to-purple-400 text-white font-bold text-xl rounded-xl">${exp.company.charAt(0)}</div>`;
+                                }
+                              }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex-1 min-w-0">
                         <h3 className="text-xl font-bold text-gray-900 mb-1">{exp.title}</h3>
                         <div className="flex items-center gap-2 text-orange-600 font-medium mb-2">
                           <span>{exp.company}</span>
