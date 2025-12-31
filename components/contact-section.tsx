@@ -90,10 +90,7 @@ export function ContactSection() {
                 <div className="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-500">
                   <Phone size={20} />
                 </div>
-                <div>
-                  <p className="text-sm text-gray-500">Phone</p>
-                  <p className="text-gray-800 font-medium">+91 83417 62676</p>
-                </div>
+
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-500">
