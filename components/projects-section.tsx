@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github, Target } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const projects = [
@@ -10,29 +10,29 @@ const projects = [
     title: "Click to Chat WhatsApp Plugin Website",
     description:
       "Developed the complete product website for a WordPress plugin with 700,000 plus active installations. Handled pricing architecture, plugin payments and checkout shop pages for monetization flow.",
-    image: "/placeholder.svg",
-    tags: ["WordPress", "JavaScript", "Payments", "PHP"],
-    liveUrl: "https://holithemes.com/plugins/click-to-chat-for-whatsapp/",
-    githubUrl: "#",
+    image: "https://res.cloudinary.com/dv5lcy4na/image/upload/v1767162745/CTC_Website.webp",
+    tags: ["WordPress", "JavaScript", "Payments", "PHP","HTML/CSS", "Tailwind CSS"],
+    liveUrl: "https://holithemes.com/plugins/click-to-chat/",
+    githubUrl: "https://github.com/harshitha7-ht",
   },
   {
     id: 2,
     title: "HoliThemes Website",
     description:
       "Built the full brand website with modern UI systems, animations and responsive layouts. Implemented consistent design language aligned with product focused positioning.",
-    image: "/placeholder.svg",
-    tags: ["React", "Tailwind CSS", "Animations", "UI/UX"],
+    image: "https://res.cloudinary.com/dv5lcy4na/image/upload/v1767162744/HoliThemes_Website.webp",
+    tags: ["JavaScript", "HTML/CSS", "Animations", "AI Integration"],
     liveUrl: "https://holithemes.com",
-    githubUrl: "#",
+    githubUrl: "https://github.com/harshitha7-ht",
   },
   {
     id: 3,
     title: "Viswa Bharathi College of Law Website",
     description:
       "Developed a complete academic website using WordPress with custom PHP logic. Implemented admissions, programs and academic content with clear navigation flow.",
-    image: "/academic-law-college-institution-books-graduation-.jpg",
-    tags: ["WordPress", "PHP", "CMS", "Academic"],
-    liveUrl: "https://viswabharathicollegeoflaw.com",
+    image: "https://res.cloudinary.com/dv5lcy4na/image/upload/v1767162750/VBL_College_Website.webp",
+    tags: ["WordPress", "PHP", "Custom Themes & Plugins"],
+    liveUrl: "https://viswabharathilaw.edu.in/",
     githubUrl: "#",
   },
 ]
@@ -62,8 +62,14 @@ export function ProjectsSection() {
     <section id="projects" ref={sectionRef} className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-orange-500 font-medium mb-2">Portfolio</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">My Amazing Works</h2>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-4">
+            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+            <span className="text-orange-600 font-medium text-sm">Portfolio</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">My Amazing Works</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            A collection of projects showcasing my expertise in web development, from WordPress plugins to modern web applications.
+          </p>
         </div>
 
         <div
@@ -72,54 +78,68 @@ export function ProjectsSection() {
           }`}
         >
           {projects.map((project, index) => (
-            <div
+            <a
               key={project.id}
-              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 cursor-pointer hover:border-orange-200"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Project Image */}
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden bg-gray-50">
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                   <div className="flex gap-3">
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-800 hover:bg-orange-500 hover:text-white transition-colors"
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
+                      }}
+                      className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-gray-800 hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg"
+                      aria-label={`View ${project.title} live`}
                     >
                       <ExternalLink size={18} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-800 hover:bg-orange-500 hover:text-white transition-colors"
-                    >
-                      <Github size={18} />
-                    </a>
+                    </button>
+                    {project.githubUrl !== "#" && (
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          window.open(project.githubUrl, '_blank', 'noopener,noreferrer');
+                        }}
+                        className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-gray-800 hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg"
+                        aria-label={`View ${project.title} source code`}
+                      >
+                        <Github size={18} />
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-500 text-sm mb-4 line-clamp-2">{project.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300 flex items-center gap-2">
+                  {project.title}
+                  <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-3">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-3 py-1 text-xs font-medium rounded-full bg-orange-50 text-orange-600">
+                    <span key={tag} className="px-3 py-1.5 text-xs font-medium rounded-full bg-gradient-to-r from-orange-50 to-pink-50 text-orange-700 border border-orange-100">
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -129,8 +149,8 @@ export function ProjectsSection() {
             variant="outline"
             className="rounded-full px-8 border-orange-200 text-orange-600 hover:bg-orange-50 bg-transparent"
           >
-            <a href="https://github.com/mathiharshitha" target="_blank" rel="noopener noreferrer">
-              View All Projects
+            <a href="https://holithemes.com/plugins/click-to-chat/author/harshitha/page/2/" target="_blank" rel="noopener noreferrer">
+              View All Product Pages from HoliThemes
             </a>
           </Button>
         </div>
