@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react"
-import { DeveloperStatus } from "./developer-status"
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -58,9 +57,9 @@ export function HeroSection() {
             </p>
 
             {/* Developer Status */}
-            <div className="flex justify-start">
+            {/* <div className="flex justify-start">
               <DeveloperStatus theme="light" />
-            </div>
+            </div> */}
 
             {/* CTA Button */}
             <Button
@@ -68,13 +67,13 @@ export function HeroSection() {
               size="lg"
               className="rounded-full px-8 bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-200"
             >
-              <a href="#contact">Hire Me</a>
+              <a href="#about">Know more</a>
             </Button>
 
             {/* Social Icons */}
             <div className="flex items-center gap-4 pt-4">
               <a
-                href="https://github.com/mathiharshitha"
+                href="https://github.com/harshitha7-ht"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-100 hover:bg-orange-100 flex items-center justify-center text-gray-600 hover:text-orange-500 transition-colors"
@@ -82,7 +81,7 @@ export function HeroSection() {
                 <Github size={18} />
               </a>
               <a
-                href="https://linkedin.com/in/mathiharshitha"
+                href="https://www.linkedin.com/in/harshithamathi/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-100 hover:bg-orange-100 flex items-center justify-center text-gray-600 hover:text-orange-500 transition-colors"
@@ -112,45 +111,31 @@ export function HeroSection() {
             }`}
           >
             <div className="relative">
-              {/* Decorative elements around image */}
-              <div className="absolute -top-6 -left-6 w-20 h-20 bg-purple-200/60 rounded-2xl animate-float" />
-              <div
-                className="absolute -bottom-4 -right-4 w-16 h-16 bg-yellow-200/60 rounded-full animate-float"
-                style={{ animationDelay: "1s" }}
-              />
-              <div
-                className="absolute top-1/2 -right-10 w-6 h-6 bg-pink-300/60 rounded-full animate-float"
-                style={{ animationDelay: "2s" }}
-              />
-
-              {/* Small decorative icons */}
-              <div
-                className="absolute -top-2 right-10 w-10 h-10 bg-white rounded-lg shadow-md flex items-center justify-center animate-float"
-                style={{ animationDelay: "0.5s" }}
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-purple-500">
-                  <path
-                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-              <div
-                className="absolute bottom-10 -left-8 w-10 h-10 bg-white rounded-lg shadow-md flex items-center justify-center animate-float"
-                style={{ animationDelay: "1.5s" }}
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-cyan-500">
-                  <rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" />
-                </svg>
-              </div>
-
               {/* Main image container */}
-              <div className="relative w-72 h-80 md:w-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                <img
-                  src="/professional-developer-portrait-photo--friendly-sm.jpg"
-                  alt="Harshitha Mathi - Web Developer"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative">
+                {/* Image container with defined dimensions */}
+                <div className="w-80 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] relative">
+                  {/* Background glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-pink-400/20 rounded-3xl blur-2xl scale-110" />
+                  
+                  {/* Main image container with glass morphism */}
+                  <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/20 bg-white/10 backdrop-blur-sm">
+                    <img
+                      src="https://res.cloudinary.com/dv5lcy4na/image/upload/v1767158016/Harshitha_Mathi_portfolio_image_akerxa.webp"
+                      alt="Harshitha Mathi - Web Developer"
+                      className="w-full h-full object-contain p-4"
+                    />
+                    
+                    {/* Subtle overlay gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-transparent to-white/5 pointer-events-none" />
+                  </div>
+                  
+                  
+                  
+                  
+                  
+                  
+                </div>
               </div>
             </div>
           </div>
