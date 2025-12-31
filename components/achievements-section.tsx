@@ -80,11 +80,11 @@ export function AchievementsSection() {
       ref={sectionRef}
       className="py-24 bg-gradient-to-br from-yellow-50/30 via-white to-orange-50/20 relative overflow-hidden"
     >
-      <div className="absolute top-16 left-16 opacity-20">
-        <HandDrawnStar className="w-14 h-14 text-yellow-400 animate-pulse-soft" />
+      <div className="absolute top-16 left-8 sm:left-16 opacity-20">
+        <HandDrawnStar className="w-10 sm:w-14 h-10 sm:h-14 text-yellow-400 animate-pulse-soft" />
       </div>
-      <div className="absolute bottom-20 right-16 opacity-15">
-        <HandDrawnCircle className="w-20 h-20 text-orange-300 animate-blob" />
+      <div className="absolute bottom-20 right-8 sm:right-16 opacity-15">
+        <HandDrawnCircle className="w-16 sm:w-20 h-16 sm:h-20 text-orange-300 animate-blob" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -96,7 +96,7 @@ export function AchievementsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {achievements.map((achievement, index) => {
             const Icon = achievement.icon
             const colorClasses = getColorClasses(achievement.color)
@@ -109,22 +109,22 @@ export function AchievementsSection() {
                 }`}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
-                <div className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${colorClasses.split(' ')[2]} group`}>
-                  <div className="flex items-start gap-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${colorClasses.split(' ')[0]} ${colorClasses.split(' ')[1]} rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
-                      <Icon size={24} className="text-white" />
+                <div className={`bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${colorClasses.split(' ')[2]} group`}>
+                  <div className="flex items-start gap-4 sm:gap-6">
+                    <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${colorClasses.split(' ')[0]} ${colorClasses.split(' ')[1]} rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                      <Icon size={20} className="text-white sm:w-6 sm:h-6" />
                     </div>
                     
                     <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">{achievement.title}</h3>
-                        <span className="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-2">
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900">{achievement.title}</h3>
+                        <span className="text-xs sm:text-sm font-medium text-gray-500 bg-gray-100 px-2 sm:px-3 py-1 rounded-full self-start sm:self-auto">
                           {achievement.year}
                         </span>
                       </div>
                       
-                      <p className="text-blue-600 font-medium mb-3">{achievement.organization}</p>
-                      <p className="text-gray-600 leading-relaxed">{achievement.description}</p>
+                      <p className="text-blue-600 font-medium mb-3 text-sm sm:text-base">{achievement.organization}</p>
+                      <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{achievement.description}</p>
                     </div>
                   </div>
                 </div>

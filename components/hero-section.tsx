@@ -12,11 +12,14 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-gradient-to-br from-orange-50/50 via-white to-pink-50/30">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Main gradient wash */}
-        <div className="absolute top-0 right-0 w-[60%] sm:w-[70%] h-[80%] bg-gradient-to-bl from-orange-200/60 via-pink-100/40 to-transparent rounded-bl-[100%]" />
-        <div className="absolute top-20 right-10 sm:right-20 w-[40%] sm:w-[50%] h-[60%] bg-gradient-to-bl from-purple-200/30 via-pink-100/20 to-transparent rounded-bl-[100%]" />
+        {/* Main gradient wash - Extended to cover full width */}
+        <div className="absolute top-0 right-0 w-full h-[80%] bg-gradient-to-bl from-orange-200/60 via-pink-100/40 to-transparent" />
+        <div className="absolute top-0 right-0 w-[80%] sm:w-[70%] h-[90%] bg-gradient-to-bl from-purple-200/30 via-pink-100/20 to-transparent rounded-bl-[100%]" />
+
+        {/* Additional background coverage */}
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-50/30 via-pink-50/20 to-purple-50/30" />
 
         {/* Decorative blobs */}
         <div
