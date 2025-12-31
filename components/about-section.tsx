@@ -7,7 +7,7 @@ import { CodeSnippet } from "./code-snippet"
 const stats = [
   { icon: Code2, value: "1+", label: "Years Experience", color: "from-blue-500 to-cyan-500" },
   { icon: Users, value: "700K+", label: "Plugin Users", color: "from-green-500 to-emerald-500" },
-  { icon: Trophy, value: "15+", label: "Projects Completed", color: "from-purple-500 to-pink-500" },
+  { icon: Trophy, value: "3+", label: "Projects Completed", color: "from-purple-500 to-pink-500" },
   { icon: Zap, value: "100%", label: "Client Satisfaction", color: "from-orange-500 to-red-500" }
 ]
 
@@ -102,19 +102,27 @@ export function AboutSection() {
                   <div className="grid grid-cols-2 gap-3">
                     <div className="flex items-center gap-2 p-3 bg-blue-100 rounded-lg">
                       <div className="w-4 h-4 bg-blue-500 rounded"></div>
-                      <span className="text-sm font-medium text-gray-700">React & Next.js</span>
-                    </div>
-                    <div className="flex items-center gap-2 p-3 bg-yellow-100 rounded-lg">
-                      <div className="w-4 h-4 bg-yellow-500 rounded"></div>
-                      <span className="text-sm font-medium text-gray-700">JavaScript & TypeScript</span>
+                      <span className="text-sm font-medium text-gray-700">React.js</span>
                     </div>
                     <div className="flex items-center gap-2 p-3 bg-green-100 rounded-lg">
                       <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                      <span className="text-sm font-medium text-gray-700">Node.js & Python</span>
+                      <span className="text-sm font-medium text-gray-700">Node.js</span>
                     </div>
-                    <div className="flex items-center gap-2 p-3 bg-purple-100 rounded-lg">
+                    <div className="flex items-center gap-2 p-3 bg-pink-100 rounded-lg">
+                      <div className="w-4 h-4 bg-yellow-500 rounded"></div>
+                      <span className="text-sm font-medium text-gray-700">Tailwind CSS</span>
+                    </div>
+                    <div className="flex items-center gap-2 p-3 bg-blue-100 rounded-lg">
                       <div className="w-4 h-4 bg-purple-500 rounded"></div>
-                      <span className="text-sm font-medium text-gray-700">Tailwind & CSS</span>
+                      <span className="text-sm font-medium text-gray-700">HTML,CSS & JS</span>
+                    </div>
+                    <div className="flex items-center gap-2 p-3 bg-yellow-100 rounded-lg">
+                      <div className="w-4 h-4 bg-pink-500 rounded"></div>
+                      <span className="text-sm font-medium text-gray-700">WordPress</span>
+                    </div>
+                    <div className="flex items-center gap-2 p-3 bg-orange-100 rounded-lg">
+                      <div className="w-4 h-4 bg-orange-500 rounded"></div>
+                      <span className="text-sm font-medium text-gray-700">Python & SQL</span>
                     </div>
                   </div>
                 </div>
@@ -128,7 +136,7 @@ export function AboutSection() {
                         <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                         <div className="w-3 h-3 rounded-full bg-green-500"></div>
                       </div>
-                      <span className="text-gray-300 text-sm font-mono">developerLocation.js</span>
+                      <span className="text-gray-300 text-sm font-mono">HarshithaLocation.js</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
@@ -140,7 +148,7 @@ export function AboutSection() {
                     <div className="text-gray-300">
                       <span className="text-purple-400">function</span>{" "}
                       <span className="text-blue-400">Location</span>
-                      <span className="text-gray-300">{"({ developer }) {"}</span>
+                      <span className="text-gray-300">{"({ Harshitha }) {"}</span>
                     </div>
                     <div className="text-gray-300 ml-4 mt-1">
                       <span className="text-purple-400">return</span>{" "}
@@ -275,10 +283,16 @@ export function AboutSection() {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <span className="relative z-10">Let's Work Together</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
+              <a 
+                href="#contact" 
+                className="inline-block"
+                aria-label="Navigate to contact section to work together"
+              >
+                <button className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-orange-300">
+                  <span className="relative z-10">Let's Work Together</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </button>
+              </a>
             </div>
           </div>
         </div>
