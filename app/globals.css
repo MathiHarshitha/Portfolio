@@ -334,6 +334,6 @@ section {
   
   /* Prevent horizontal overflow on all containers */
   .container, .max-w-6xl, .max-w-7xl {
-    max-width: calc(100vw - 2rem);
+    max-width: calc(100vw);
   }
 }
