@@ -9,8 +9,8 @@ const achievements = [
     id: 1,
     title: "Production Grade Websites",
     organization: "Professional Achievement",
-    year: "2024",
-    description: "Delivered multiple production grade websites and plugin platforms with clean, maintainable code",
+    year: "2025",
+    description: "Delivered multiple production grade Webpages and plugin platforms with clean, maintainable code",
     icon: Trophy,
     color: "gold"
   },
@@ -18,7 +18,7 @@ const achievements = [
     id: 2,
     title: "Revenue Impact Components",
     organization: "HoliThemes",
-    year: "2024",
+    year: "2025",
     description: "Owned revenue impacting components including pricing configuration and checkout workflows",
     icon: Award,
     color: "blue"
@@ -36,7 +36,7 @@ const achievements = [
     id: 4,
     title: "Code Quality Recognition",
     organization: "Professional Excellence",
-    year: "2024",
+    year: "2025",
     description: "Recognized for execution consistency, code quality and documentation clarity",
     icon: Star,
     color: "purple"
