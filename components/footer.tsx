@@ -40,7 +40,7 @@ export function Footer() {
           </div>
 
           {/* Copyright - Updated */}
-          <p className="text-sm text-gray-500">© {new Date().getFullYear()} Harshitha Mathi. All rights reserved.</p>
+          <p className="text-sm text-gray-500">© {new Date().getFullYear()} Harshitha Mathi - Web Developer. All rights reserved.</p>
         </div>
       </div>
     </footer>
