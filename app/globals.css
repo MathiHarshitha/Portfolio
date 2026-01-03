@@ -316,7 +316,7 @@ section {
   
   /* Ensure absolute positioned elements don't overflow */
   .absolute {
-    max-width: calc(100vw - 2rem);
+    max-width: calc(100vw);
   }
 }
 

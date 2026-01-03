@@ -10,24 +10,6 @@ export const metadata: Metadata = {
   title: "Harshitha Mathi | Web Developer",
   description:
     "Portfolio of Harshitha Mathi - Results driven Web Developer with expertise in React, JavaScript, and modern web technologies.",
-  generator: "v0.app",
-  icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
-  },
 }
 
 export default function RootLayout({
@@ -40,6 +22,16 @@ export default function RootLayout({
       <body className={`font-sans antialiased ${_inter.className}`}>
         {children}
         <Analytics />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Clear console and add developer message
+              if (typeof window !== 'undefined') {
+                console.log('%cHey! Developer👋 Thanks for checking the code', 'color: #f97316; font-size: 16px; font-weight: bold; padding: 10px; border: 2px solid #f97316; border-radius: 8px; background: linear-gradient(135deg, #fff7ed, #fed7aa);');
+              }
+            `,
+          }}
+        />
       </body>
     </html>
   )

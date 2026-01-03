@@ -105,20 +105,20 @@ export function AchievementsSection() {
               <div
                 key={achievement.id}
                 className={`transition-all duration-700 ${
-                  isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
-                <div className={`bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${colorClasses.split(' ')[2]} group`}>
-                  <div className="flex items-start gap-4 sm:gap-6">
+                <div className={`bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${colorClasses.split(' ')[2]} group h-full flex flex-col`}>
+                  <div className="flex items-start gap-4 sm:gap-6 flex-1">
                     <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${colorClasses.split(' ')[0]} ${colorClasses.split(' ')[1]} rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
                       <Icon size={20} className="text-white sm:w-6 sm:h-6" />
                     </div>
                     
-                    <div className="flex-1">
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-2">
-                        <h3 className="text-lg sm:text-xl font-bold text-gray-900">{achievement.title}</h3>
-                        <span className="text-xs sm:text-sm font-medium text-gray-500 bg-gray-100 px-2 sm:px-3 py-1 rounded-full self-start sm:self-auto">
+                    <div className="flex-1 min-h-0">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 flex-1">{achievement.title}</h3>
+                        <span className="text-xs sm:text-sm font-medium text-gray-500 bg-gray-100 px-2 sm:px-3 py-1 rounded-full self-start sm:self-auto flex-shrink-0">
                           {achievement.year}
                         </span>
                       </div>

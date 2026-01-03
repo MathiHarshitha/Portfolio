@@ -144,7 +144,7 @@ export function SkillsSection() {
                     <button
                       key={category.id}
                       onClick={() => setActiveTab(category.id)}
-                      className={`flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 rounded-full transition-all duration-300 tab-hover text-xs sm:text-sm ${
+                      className={`flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 rounded-full transition-all duration-300 tab-hover text-xs sm:text-sm cursor-pointer ${
                         activeTab === category.id
                           ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
                           : 'bg-white/10 backdrop-blur-sm text-white/70 hover:bg-white/20 hover:text-white'

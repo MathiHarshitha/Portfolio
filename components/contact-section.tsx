@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
-import { Send, CheckCircle, Mail, MapPin, Phone } from "lucide-react"
+import { Send, CheckCircle, Mail, MapPin, Phone, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -83,22 +83,39 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Email</p>
-                  <p className="text-gray-800 font-medium">mathiharshitha@gmail.com</p>
+                  <a 
+                    href="mailto:mathiharshitha@gmail.com"
+                    className="text-gray-800 font-medium hover:text-orange-500 transition-colors duration-200"
+                  >
+                    mathiharshitha@gmail.com
+                  </a>
                 </div>
               </div>
-              {/* <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-500">
-                  <Phone size={20} />
+              
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-500">
+                  <Linkedin size={20} />
                 </div>
+                <div>
+                  <p className="text-sm text-gray-500">LinkedIn</p>
+                  <a 
+                    href="https://www.linkedin.com/in/harshithamathi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-800 font-medium hover:text-blue-500 transition-colors duration-200"
+                  >
+                    linkedin.com/in/harshithamathi
+                  </a>
+                </div>
+              </div>
 
-              </div> */}
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-500">
                   <MapPin size={20} />
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Location</p>
-                  <p className="text-gray-800 font-medium">India</p>
+                  <p className="text-gray-800 font-medium">Andhra Pradesh, India</p>
                 </div>
               </div>
             </div>
