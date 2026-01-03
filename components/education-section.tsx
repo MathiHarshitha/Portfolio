@@ -7,20 +7,20 @@ import { HandDrawnBook, HandDrawnStar, HandDrawnCircle } from "./doodles"
 const education = [
   {
     id: 1,
-    degree: "BTech ECE",
+    degree: "Bachelor's of Technology",
     institution: "St. Marys Womens Engineering College, Guntur",
     location: "Guntur, India",
     period: "2019 - 2023",
-    grade: "Engineering",
+    grade: "ECE",
     description: "Bachelor of Technology in Electronics and Communication Engineering with strong foundation in technical principles."
   },
   {
     id: 2,
-    degree: "Intermediate MPC",
+    degree: "Intermediate ",
     institution: "Sri Chaitanya Girls Junior Kalasala, Vijayawada", 
     location: "Vijayawada, India",
     period: "2017 - 2019",
-    grade: "MPC Stream",
+    grade: "MPC",
     description: "Intermediate education in Mathematics, Physics, and Chemistry providing strong analytical foundation."
   },
   {

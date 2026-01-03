@@ -235,7 +235,7 @@ export function SkillsSection() {
               <div className="relative bg-black/20 backdrop-blur-sm rounded-3xl p-4 sm:p-8 border border-white/10">
                 <div className="relative w-full aspect-square max-w-sm sm:max-w-md mx-auto">
                   <Image
-                    src="/Skills image.png"
+                    src="https://res.cloudinary.com/dv5lcy4na/image/upload/v1767439504/Skill-brain.webp"
                     alt="Skills and Technologies"
                     fill
                     className="object-contain rounded-2xl"
