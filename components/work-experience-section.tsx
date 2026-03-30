@@ -25,7 +25,7 @@ const experiences = [
     id: 2,
     title: "Web Engineer (Part Time - Freelance)",
     company: "SabariyaTech",
-    logo: "https://res.cloudinary.com/dv5lcy4na/image/upload/v1767162143/sabariyatech_logo.png",
+    logo: "https://res.cloudinary.com/dv5lcy4na/image/upload/v1774878128/Sabariya_logo_l9tmnb.jpg",
     location: "Remote",
     period: "Sep 2025 - Present",
     type: "Freelance",
