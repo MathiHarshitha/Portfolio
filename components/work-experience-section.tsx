@@ -23,6 +23,21 @@ const experiences = [
   },
   {
     id: 2,
+    title: "Web Engineer (Part Time - Freelance)",
+    company: "SabariyaTech",
+    logo: "https://res.cloudinary.com/dv5lcy4na/image/upload/v1767162143/sabariyatech_logo.png",
+    location: "Remote",
+    period: "Sep 2025 - Present",
+    type: "Freelance",
+    description: "Delivered 5+ client websites across tourism, training and legal domains using React, Next.js and WordPress. Engineered responsive and dynamic interfaces with structured lead generation flows including forms and inquiry systems.",
+    achievements: [
+      "Owned frontend development and ensured structured delivery aligned with client requirements and timeline",
+      "Built conversion-focused interfaces with lead generation systems across multiple domains"
+    ],
+    technologies: ["React", "Next.js", "WordPress", "JavaScript", "Tailwind CSS", "Frontend Development"]
+  },
+  {
+    id: 3,
     title: "Web Development Intern",
     company: "Oasis Infobyte",
     logo: "https://res.cloudinary.com/dv5lcy4na/image/upload/v1767161880/oasis_infobyte_logo_dixey0.jpg",
