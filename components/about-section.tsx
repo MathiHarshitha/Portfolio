@@ -5,9 +5,9 @@ import { Code2, Zap, Users, Trophy } from "lucide-react"
 import { CodeSnippet } from "./code-snippet"
 
 const stats = [
-  { icon: Code2, value: "1+", label: "Years Experience", color: "from-blue-500 to-cyan-500" },
+  { icon: Code2, value: "2+", label: "Years Experience", color: "from-blue-500 to-cyan-500" },
   { icon: Users, value: "700K+", label: "Plugin Users", color: "from-green-500 to-emerald-500" },
-  { icon: Trophy, value: "3+", label: "Projects Completed", color: "from-purple-500 to-pink-500" },
+  { icon: Trophy, value: "10+", label: "Projects Completed", color: "from-purple-500 to-pink-500" },
   { icon: Zap, value: "100%", label: "Client Satisfaction", color: "from-orange-500 to-red-500" }
 ]
 
@@ -19,15 +19,15 @@ export function AboutSection() {
   const tabs = [
     {
       title: "Developer",
-      content: "I specialize in building modern web applications with React, JavaScript, and cutting-edge technologies. My focus is on creating scalable, performant solutions."
+      content: "I build scalable, production-ready web solutions with React, Redux, JavaScript, Next.js, Node.js, REST APIs, and database integration for real-world business workflows."
     },
     {
-      title: "Problem Solver", 
-      content: "I approach challenges with analytical thinking and creative solutions. Every project is an opportunity to innovate and deliver exceptional results."
+      title: "Problem Solver",
+      content: "I focus on solving practical product and client challenges with maintainable code, responsive interfaces, and reliable frontend-backend integration."
     },
     {
       title: "Team Player",
-      content: "Collaboration drives success. I work effectively with cross-functional teams to deliver projects that exceed expectations and business goals."
+      content: "I collaborate with backend engineers, stakeholders, and team members to deliver clean, efficient digital experiences across ERP, WordPress, and client projects."
     }
   ]
 
@@ -209,10 +209,10 @@ export function AboutSection() {
               </div>
               
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                I Build Digital
+                Software Developer
                 <br />
                 <span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
-                  Experiences
+                  building practical solutions
                 </span>
               </h2>
             </div>

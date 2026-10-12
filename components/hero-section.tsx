@@ -51,12 +51,12 @@ export function HeroSection() {
                 Harshitha Mathi
               </h1>
               <p className="text-lg text-gray-600">
-                A <span className="text-orange-500 font-medium">Web Developer</span> from India
+                A <span className="text-orange-500 font-medium">Software Developer</span> from India
               </p>
             </div>
             <p className="text-gray-500 max-w-md leading-relaxed">
-              Results driven Web Developer with ownership across design, development and production deployment. Strong
-              execution focus across frontend, backend, payments and deployment workflows.
+              Software Developer focused on React, Redux, JavaScript, Next.js, Node.js, REST APIs, database integration,
+              WordPress, and responsive web development across production ERP modules, client websites, and full-stack applications.
             </p>
 
             {/* Developer Status */}
@@ -76,7 +76,7 @@ export function HeroSection() {
             {/* Social Icons */}
             <div className="flex items-center gap-4 pt-4">
               <a
-                href="https://github.com/harshitha7-ht"
+                href="https://github.com/MathiHarshitha/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-100 hover:bg-orange-100 flex items-center justify-center text-gray-600 hover:text-orange-500 transition-colors"

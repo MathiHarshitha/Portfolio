@@ -8,48 +8,70 @@ import Image from "next/image"
 const experiences = [
   {
     id: 1,
-    title: "Web Developer and Content Writer",
-    company: "HoliThemes",
-    logo: "https://res.cloudinary.com/dv5lcy4na/image/upload/v1767162143/holithemes_logo.png",
-    location: "Vijayawada - India",
-    period: "Nov 2024 - Present",
+    title: "Frontend Developer",
+    company: "Gait View Technophiles Private Limited",
+    logo: "https://app.gaitview.com/favicon.ico",
+    location: "Hyderabad - India",
+    period: "Apr 2026 - Present",
     type: "Full-time",
-    description: "Owned complete development and maintenance of holithemes.com with responsive UI and motion driven layouts. Built and scaled Click to Chat product pages with conversion focused structure and feature clarity.",
+    description:
+      "Develop and maintain production School ERP modules using React, Redux, JavaScript, and REST APIs. Build reusable UI components for student management, fees, attendance, examinations, and administrative workflows while resolving production issues in collaboration with backend engineers.",
     achievements: [
-      "Delivered production ready code, animations and documentation aligned with business goals",
-      "Contributed to WordPress plugin ecosystem with 700,000+ active installations"
+      "Developed and maintained production ERP modules for school operations and academic workflows.",
+      "Integrated APIs and built reusable, responsive frontend components for key administrative processes.",
+      "Collaborated with backend teams to troubleshoot issues and improve data-driven user workflows."
     ],
-    technologies: [ "JavaScript", "WordPress", "PHP", "Tailwind CSS", "HTML", "CSS"]
+    technologies: ["React", "Redux", "JavaScript", "REST APIs", "SCSS", "Production ERP"]
   },
   {
     id: 2,
-    title: "Web Engineer (Part Time - Freelance)",
+    title: "Freelance Full-Stack Developer, Part-Time",
     company: "SabariyaTech",
-    logo: "https://res.cloudinary.com/dv5lcy4na/image/upload/v1774878128/Sabariya_logo_l9tmnb.jpg",
+    logo: "/SabariyaTech.png",
     location: "Remote",
     period: "Sep 2025 - Present",
     type: "Freelance",
-    description: "Delivered 5+ client websites across tourism, training and legal domains using React, Next.js and WordPress. Engineered responsive and dynamic interfaces with structured lead generation flows including forms and inquiry systems.",
+    description:
+      "Develop and maintain client websites and web applications, working across frontend implementation, backend integration, database setup, deployment, and ongoing maintenance. Select technologies based on each project requirement and business goals.",
     achievements: [
-      "Owned frontend development and ensured structured delivery aligned with client requirements and timeline",
-      "Built conversion-focused interfaces with lead generation systems across multiple domains"
+      "Delivered client websites and applications with responsive frontend and full-stack integration work.",
+      "Handled deployment, maintenance, and database implementation across multiple project requirements.",
+      "Built solutions tailored to business needs across website and application development work."
     ],
-    technologies: ["React", "Next.js", "WordPress", "JavaScript", "Tailwind CSS", "Frontend Development"]
+    technologies: ["React", "Next.js", "Node.js", "Database Integration", "WordPress", "Deployment"]
   },
   {
     id: 3,
+    title: "Web Developer & Technical Content Writer",
+    company: "HoliProjects Internet Private Limited",
+    logo: "https://holithemes.com/favicon.ico",
+    location: "Vijayawada - India",
+    period: "Nov 2024 - Apr 2026",
+    type: "Full-time",
+    description:
+      "Developed responsive WordPress websites and product pages, including pricing, payment, product, and conversion-focused pages. Worked with JavaScript, CSS, WordPress, and custom frontend styling while creating technical documentation for product and business use cases.",
+    achievements: [
+      "Built responsive WordPress websites and conversion-focused product pages for business needs.",
+      "Implemented frontend styling and interactive behavior with JavaScript and custom CSS.",
+      "Created technical documentation to support product communication and implementation clarity."
+    ],
+    technologies: ["JavaScript", "WordPress", "CSS", "Responsive UI", "Technical Writing", "Frontend Styling"]
+  },
+  {
+    id: 4,
     title: "Web Development Intern",
     company: "Oasis Infobyte",
-    logo: "https://res.cloudinary.com/dv5lcy4na/image/upload/v1767161880/oasis_infobyte_logo_dixey0.jpg",
+    logo: "https://oasisinfobyte.com/favicon.ico",
     location: "Remote",
     period: "May 2023 - Internship",
     type: "Internship",
-    description: "Executed real world frontend and JavaScript projects in a structured development environment. ",
+    description:
+      "Executed real-world frontend and JavaScript projects in a structured development environment, strengthening responsive design, DOM handling, and UI implementation fundamentals.",
     achievements: [
-      "Strengthened fundamentals across responsive layouts, DOM handling and best practices",
-      "Improved development workflow discipline through hands on delivery"
+      "Strengthened fundamentals across responsive layouts, DOM handling, and frontend best practices.",
+      "Improved workflow discipline through hands-on delivery of practical web development tasks."
     ],
-    technologies: ["JavaScript", "HTML", "CSS", "React", "Frontend Development"]
+    technologies: ["JavaScript", "HTML", "CSS", "Frontend Development", "Responsive UI"]
   }
 ]
 

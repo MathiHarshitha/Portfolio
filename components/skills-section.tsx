@@ -10,35 +10,36 @@ const skillCategories = [
     id: "all",
     title: "All Skills",
     icon: Sparkles,
-    skills: ["React", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS", "Node.js", "Python", "PHP", "SQL", "Git", "WordPress", "Vercel", "AI/RAG", "Animations"],
+    skills: ["React", "Redux", "Next.js", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS", "Node.js", "Python", "PHP", "SQL", "Git", "WordPress", "Vercel", "AI/RAG", "Animations"],
     color: "from-cyan-400 to-purple-400"
   },
   {
     id: "frontend",
     title: "Frontend",
     icon: Monitor,
-    skills: ["React", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS"],
+    skills: ["React", "Redux", "Next.js", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS"],
     color: "from-blue-400 to-cyan-400"
   },
   {
     id: "backend", 
     title: "Backend",
     icon: Server,
-    skills: ["Node.js", "Python", "PHP", ],
-    color: "from-green-400 to-emerald-400"
+    skills: ["Node.js", "Express.js", "Python", "PHP", "SQL"  ],
+    color: "from-green-400 to-emerald-400"  
   },
   {
     id: "database",
     title: "Database",
     icon: Database,
-    skills: ["MongoDB", "MySQL", ],
+    skills: ["MongoDB", "MySQL", "PostgreSQL"],
     color: "from-purple-400 to-violet-400"
   },
   {
+
     id: "tools",
     title: "Tools",
     icon: Wrench,
-    skills: ["Git", "WordPress", "Vercel", ],
+    skills: ["Git", "WordPress", "Vercel", "Render", "Docker", "Notion", "Canva"],
     color: "from-orange-400 to-red-400"
   },
   {

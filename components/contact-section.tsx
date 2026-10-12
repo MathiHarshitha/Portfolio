@@ -2,15 +2,13 @@
 
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
-import { Send, CheckCircle, Mail, MapPin, Phone, Linkedin } from "lucide-react"
+import { Send, Mail, MapPin, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
 export function ContactSection() {
   const [isVisible, setIsVisible] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -30,12 +28,22 @@ export function ContactSection() {
     return () => observer.disconnect()
   }, [])
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setIsLoading(true)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setIsLoading(false)
-    setIsSubmitted(true)
+    const formData = new FormData(e.currentTarget)
+    const subject = String(formData.get("subject") || "")
+    const body = [
+      `Name: ${formData.get("name") || ""}`,
+      `Email: ${formData.get("email") || ""}`,
+      "",
+      String(formData.get("message") || ""),
+    ].join("\n")
+    const mailtoUrl = `mailto:mathiharshitha@gmail.com?${new URLSearchParams({
+      subject,
+      body,
+    }).toString()}`
+
+    window.location.href = mailtoUrl
   }
 
   return (
@@ -127,23 +135,7 @@ export function ContactSection() {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            {isSubmitted ? (
-              <div className="text-center py-12">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-6">
-                  <CheckCircle className="w-8 h-8" />
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2">Message Sent!</h3>
-                <p className="text-gray-500 mb-6">Thank you for reaching out. I'll get back to you soon.</p>
-                <Button
-                  variant="outline"
-                  className="rounded-full border-orange-200 text-orange-600 hover:bg-orange-50 bg-transparent"
-                  onClick={() => setIsSubmitted(false)}
-                >
-                  Send Another Message
-                </Button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid md:grid-cols-2 gap-5">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-gray-700">
@@ -200,18 +192,13 @@ export function ContactSection() {
                   type="submit"
                   size="lg"
                   className="w-full rounded-full gap-2 bg-orange-500 hover:bg-orange-600 text-white"
-                  disabled={isLoading}
                 >
-                  {isLoading ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                      Send Message <Send size={18} />
-                    </>
-                  )}
+                  Open Email Draft <Send size={18} />
                 </Button>
-              </form>
-            )}
+              <p className="text-center text-xs text-gray-500">
+                Your email app will open with your message addressed to mathiharshitha@gmail.com.
+              </p>
+            </form>
           </div>
         </div>
       </div>

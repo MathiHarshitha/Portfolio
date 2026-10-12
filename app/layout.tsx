@@ -7,14 +7,14 @@ import "./globals.css"
 const _inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Harshitha Mathi | Web Developer",
+  title: "Harshitha Mathi | Software Developer",
   description:
-    "Harshitha Mathi - Professional Web Developer from India specializing in React, JavaScript, WordPress, and modern web technologies. Portfolio showcasing 700K+ plugin users and production-grade websites.",
+    "Harshitha Mathi - Professional Software Developer from India specializing in React, JavaScript, WordPress, and modern web technologies. Portfolio showcasing 700K+ plugin users and production-grade websites.",
   keywords: [
     "Harshitha Mathi",
-    "Harshitha Mathi Web Developer",
+    "Harshitha Mathi Software Developer",
     "Harshitha Mathi Portfolio",
-    "Web Developer India",
+    "Software Developer India",
     "React Developer",
     "JavaScript Developer",
     "WordPress Developer",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "HoliThemes Web Developer",
     "Harshitha Mathi Projects",
     "Web Development Services India"
-  ],
+  ],  
   authors: [{ name: "Harshitha Mathi" }],
   creator: "Harshitha Mathi",
   publisher: "Harshitha Mathi",
